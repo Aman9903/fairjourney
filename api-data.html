@@ -1,0 +1,30 @@
+
+    var settings = {
+  "url": "https://farejourneyv2.onrender.com/getFlightDetails",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "data": JSON.stringify({
+    "market": "IN",
+    "locale": "en-US",
+    "currency": "INR",
+    "pickupCode": "IXC",
+    "dropCode": "DEL",
+    "year": "2023",
+    "month": "5",
+    "day": "5",
+    "adults": 1,
+    "cabinClass": "CABIN_CLASS_ECONOMY",
+    "childrenAges": []
+  }),
+};
+$.ajax(settings).done(function (response) {
+    const myArr = JSON.parse(response);
+    console.log("==users==", myArr);
+
+});
+
+      
+      
